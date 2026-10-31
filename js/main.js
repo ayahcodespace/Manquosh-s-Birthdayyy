@@ -12,7 +12,7 @@ const CONFIG = {
   // Photos: assets/images/1.jpg, 2.jpg, 3.jpg ... (fewer photos? the missing ones are skipped)
   photoCount: 44,
   photoPrefix: "assets/images/",
-  photoExt: ".JPEG",
+  photoExt: ".jpeg",
 
   // Quiz: answer = number of the right option (1 = first)
   quiz: [
