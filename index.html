@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A gift for you</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- ===== GATE: locked gift + quiz ===== -->
+<div class="gate" id="gate">
+  <p class="handwritten gate-hint" id="gateHint">a gift is waiting for you…</p>
+  <button class="gift" id="giftBtn" aria-label="Open the gift">
+    <span class="gift-lid"><i class="bow"></i></span><span class="gift-box"></span><span class="ribbon"></span><span class="lock">🔒</span>
+  </button>
+  <p class="handwritten" id="gateTap">tap the gift ♡</p>
+  <div class="quiz" id="quiz" dir="rtl" hidden>
+    <p class="handwritten" id="quizCount"></p>
+    <h2 id="quizQ" dir="auto"></h2>
+    <div class="quiz-opts" id="quizOpts"></div>
+    <p class="handwritten quiz-msg" id="quizMsg" dir="auto"></p>
+  </div>
+</div>
+
+<button class="music-btn" id="musicBtn" aria-label="Play music" hidden>♪</button>
+<audio id="music" loop preload="metadata"><source src="assets/audio/Sahby.mp4" type="audio/mp4"></audio>
+
+<main id="page" hidden>
+  <section class="hero">
+    <span class="doodle d1">✦</span><span class="doodle d2">✧</span>
+    <p class="handwritten" id="heroKicker"></p>
+    <h1 id="heroName"></h1>
+    <p class="hero-sub" id="heroSub"></p>
+    <div class="countdown" id="countdown" aria-live="polite"></div>
+  </section>
+
+  <!-- 45 photos hanging on strings (built by js/main.js) -->
+  <section class="block wide">
+    <h2>Our little world</h2>
+    <p class="handwritten sub">tap any photo to see it bigger</p>
+    <div id="garlands"></div>
+  </section>
+
+  <!-- Sticky notes (text lives in CONFIG.notes) -->
+  <section class="block">
+    <h2>Little notes</h2>
+    <div class="notes" id="notes"></div>
+  </section>
+
+  <!-- Videos hidden behind little curtains: tap to peek -->
+  <section class="block small">
+    <p class="handwritten sub">psst… a few secret clips (tap a curtain to peek)</p>
+    <div class="videos">
+      <!-- VIDEO: assets/videos/1.mp4 … 4.mp4 -->
+      <figure class="vcard"><video controls preload="metadata" playsinline><source src="assets/videos/1.mp4#t=0.1" type="video/mp4"></video><button class="curtain" aria-label="Open curtain"><i></i><i></i></button></figure>
+      <figure class="vcard"><video controls preload="metadata" playsinline><source src="assets/videos/2.mp4#t=0.1" type="video/mp4"></video><button class="curtain" aria-label="Open curtain"><i></i><i></i></button></figure>
+      <figure class="vcard"><video controls preload="metadata" playsinline><source src="assets/videos/3.mp4#t=0.1" type="video/mp4"></video><button class="curtain" aria-label="Open curtain"><i></i><i></i></button></figure>
+      <figure class="vcard"><video controls preload="metadata" playsinline><source src="assets/videos/4.mp4#t=0.1" type="video/mp4"></video><button class="curtain" aria-label="Open curtain"><i></i><i></i></button></figure>
+    </div>
+  </section>
+
+  <!-- Birthday gift button (runs away a few times as a joke) -->
+  <section class="block">
+    <h2>One last thing…</h2>
+    <div class="prank-zone" id="prankZone"><button class="btn" id="messageBtn">🎁 Your birthday gift</button></div>
+    <article class="letter" id="letter" hidden><div class="handwritten letter-text" id="letterText"></div></article>
+  </section>
+  <footer class="foot handwritten" id="foot"></footer>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
